@@ -21,6 +21,11 @@ class BootplantServiceProvider extends ServiceProvider
         });
 
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+        $this->publishes([
+            __DIR__ . '/resources/views' => base_path('resources/views/vendor/bootplant'),
+        ], 'views');
+
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'bootplant');
 
         $this->publishes([
