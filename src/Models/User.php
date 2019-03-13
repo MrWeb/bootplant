@@ -41,11 +41,11 @@ class User extends Authenticatable
     public function brancher($class)
     {
         //Prende $class e seleziona i dati in base ai permessi e branch_id
-        if ($this->hasRole("Super-Admin")) {
+        if ($this->hasRole("superadmin")) {
             return $class::query();
         }
 
-        if ($this->hasRole("Admin")) {
+        if ($this->hasRole("admin")) {
             return $class::where('branch_id', '=', $this->branch()->pluck('id'));
         }
         return $this->hasMany($class, 'user_id');

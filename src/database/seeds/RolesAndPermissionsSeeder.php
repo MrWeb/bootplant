@@ -15,12 +15,6 @@ class RolesAndPermissionsSeeder extends Seeder
 
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        // create orders permissions
-        Permission::create(['name' => 'create orders']);
-        Permission::create(['name' => 'edit orders']);
-        Permission::create(['name' => 'delete orders']);
-        Permission::create(['name' => 'view orders']);
-
         // create registry permissions
         Permission::create(['name' => 'create registry']);
         Permission::create(['name' => 'edit registry']);
@@ -39,21 +33,17 @@ class RolesAndPermissionsSeeder extends Seeder
         Permission::create(['name' => 'delete users']);
         Permission::create(['name' => 'view users']);
 
-        $role = Role::create(['name' => 'Super-Admin']);
+        $role = Role::create(['name' => 'superadmin']);
         $role->givePermissionTo(Permission::all());
 
-        $role = Role::create(['name' => 'Admin']);
+        $role = Role::create(['name' => 'admin']);
         $role->givePermissionTo(Permission::all());
 
-        $role = Role::create(['name' => 'Agente'])->givePermissionTo([
+        $role = Role::create(['name' => 'agente'])->givePermissionTo([
             'create registry',
             'edit registry',
             'delete registry',
             'view registry',
-            'create orders',
-            'edit orders',
-            'delete orders',
-            'view orders',
         ]);
     }
 }
