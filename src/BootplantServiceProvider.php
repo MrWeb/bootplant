@@ -112,5 +112,8 @@ class BootplantServiceProvider extends ServiceProvider
         Blade::component('bootplant::components.tabs.tab-block', 'tabs');
         Blade::component('bootplant::components.tabs.tab', 'tab');
         Blade::component('bootplant::components.tabs.tab-content', 'tabcontent');
+
+        //Table
+        Blade::component('bootplant::components.table.table', 'table');
     }
 }
