@@ -1,6 +1,6 @@
 {
     "name": "futurelabs/bootplant",
-    "description": "Bootplant: Laravel multitenant package",
+    "description": "Laravel multitenant package",
     "license": "MIT",
     "repositories": [{
         "type": "git",

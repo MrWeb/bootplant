@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
             'email'     => 'lombardi.nd@gmail.com',
             'password'  => Hash::make('apple1907'),
         ]);
-        $user->assignRole('Super-Admin');
+        $user->assignRole('superadmin');
 
         $user = User::create([
             'branch_id' => 1,
@@ -27,7 +27,7 @@ class UserTableSeeder extends Seeder
             'email'     => 'alonso@khs.it',
             'password'  => Hash::make('alonso'),
         ]);
-        $user->assignRole('Super-Admin');
+        $user->assignRole('superadmin');
 
         $user = User::create([
             'branch_id' => 1,
@@ -35,7 +35,7 @@ class UserTableSeeder extends Seeder
             'email'     => 'riccardo@khs.it',
             'password'  => Hash::make('riccardo'),
         ]);
-        $user->assignRole('Admin');
+        $user->assignRole('admin');
 
         $user = User::create([
             'branch_id' => 1,
@@ -43,6 +43,6 @@ class UserTableSeeder extends Seeder
             'email'     => 'agente@khs.it',
             'password'  => Hash::make('agente'),
         ]);
-        $user->assignRole('Agente');
+        $user->assignRole('agente');
     }
 }
