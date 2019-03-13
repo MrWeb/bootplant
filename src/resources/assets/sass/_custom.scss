@@ -1,0 +1,39 @@
+[v-cloak] {
+    display: none;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
+}
+
+.form-control-sm,
+.input-group-sm>.form-control,
+.input-group-sm>.input-group-append>.btn,
+.input-group-sm>.input-group-append>.input-group-text,
+.input-group-sm>.input-group-middle>.input-group-text,
+.input-group-sm>.input-group-prepend>.btn,
+.input-group-sm>.input-group-prepend>.input-group-text {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.table td,
+.table th {
+    vertical-align: middle !important;
+}
+
+small.error-noty {
+    margin-top: 4px;
+    border-left: 2px solid red;
+    padding-left: 2px;
+    color: red;
+    word-wrap: break-word;
+}
+
+.badge-lighter {
+    background: #CCC;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-bottom: thin solid #fff !important;
+}

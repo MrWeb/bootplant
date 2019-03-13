@@ -1,0 +1,25 @@
+{
+    "name": "futurelabs/bootplant",
+    "description": "Bootplant: Laravel multitenant package",
+    "license": "MIT",
+    "repositories": [{
+        "type": "git",
+        "url": "git@bitbucket.org:MrWeb/bootplant.git"       
+    }],
+    "autoload": {
+        "psr-4": {
+            "Futurelabs\\Bootplant\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Futurelabs\\Bootplant\\BootplantServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "laravel/framework": "5.8.4",
+        "spatie/laravel-permission": "^2.30"
+    }
+}

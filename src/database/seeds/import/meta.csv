@@ -1,0 +1,316 @@
+Altro,stato-contatti,blue,,,,,
+Cliente Potenziale,stato-contatti,green,,,,,
+Già Comprato,stato-contatti,yellow,,,,,
+Già Affittato,stato-contatti,yellow,,,,,
+Non Cerca Più,stato-contatti,grey,,,,,
+Molto Interessato,stato-contatti,orange,,,,,
+Trattativa in Corso,stato-contatti,red,,,,,
+Acquirente,tipo-contatti,,,,,,
+Acquirente-Mandante,tipo-contatti,,,,,,
+Italiano,lingua-contatti,,,,,,
+Inglese,lingua-contatti,,,,,,
+Tedesco,lingua-contatti,,,,,,
+Francese,lingua-contatti,,,,,,
+Serie del Personale,serie-policy,,,,,,
+Serie del Management,serie-policy,,,,,,
+Serie del Marketing,serie-policy,,,,,,
+Serie delle Comunicazioni,serie-policy,,,,,,
+Glossario Immobiliare,serie-policy,,,,,,
+(senza categoria),serie-policy,,,,,,
+Policy Base e Regole Generali,serie-policy,,,,,,
+(non impostato),tipo-contatti,,,,,,
+(non impostata),lingua-contatti,,,,,,
+,titolo-contatti,,,,,,
+Signor,titolo-contatti,,,,,,
+Signora,titolo-contatti,,,,,,
+Società,titolo-contatti,,,,,,
+Vendesi,tipo-vendita,,,,,,
+Affittasi,tipo-vendita,,,,,,
+Nascosto,available-immobili,,,,,,
+Attivo,available-immobili,,,,,,
+Ha Venduto,stato-proprietari,,,,,,
+Ha da Vendere,stato-proprietari,,,,,,
+Pompa di Calore aria-aria,impianto-riscaldamento-immobili,,,,,,
+Pompa di Calore geotermica,impianto-riscaldamento-immobili,,,,,,
+Caldaia gasolio/nafta,impianto-riscaldamento-immobili,,,,,,
+Caldaia a gas,impianto-riscaldamento-immobili,,,,,,
+Elettrico,impianto-riscaldamento-immobili,,,,,,
+Elettrico con Accumulatori,impianto-riscaldamento-immobili,,,,,,
+Sauna,arredo-bagno-immobili,,,,,,
+Idromassaggio,arredo-bagno-immobili,,,,,,
+Termo arredo,arredo-bagno-immobili,,,,,,
+Nafta,sistema-acqua-immobili,,,,,,
+Termo-pompa,sistema-acqua-immobili,,,,,,
+Sonda Geotermica,sistema-acqua-immobili,,,,,,
+Elettrica,sistema-acqua-immobili,,,,,,
+Gas,sistema-acqua-immobili,,,,,,
+Legna,sistema-acqua-immobili,,,,,,
+Pellet,sistema-acqua-immobili,,,,,,
+Solare,sistema-acqua-immobili,,,,,,
+A Distanza,sistema-acqua-immobili,,,,,,
+Privata,lavanderia-immobili,,,,,,
+In comune,lavanderia-immobili,,,,,,
+Termosifoni/Caloriferi,erogazione-riscaldamento-immobili,,,,,,
+Serpentine a Pavimento,erogazione-riscaldamento-immobili,,,,,,
+Aria,erogazione-riscaldamento-immobili,,,,,,
+Stufa a Pellet,impianto-riscaldamento-immobili,,,,,,
+Pannelli Solari,impianto-riscaldamento-immobili,,,,,,
+Non impostato,serramenti-immobili,,,,,,
+PVC,serramenti-immobili,,,,,,
+Alluminio,serramenti-immobili,,,,,,
+Alluminio/Legno,serramenti-immobili,,,,,,
+Legno,serramenti-immobili,,,,,,
+Non impostato,serramenti-vetro-immobili,,,,,,
+Singolo,serramenti-vetro-immobili,,,,,,
+Doppio,serramenti-vetro-immobili,,,,,,
+Triplo,serramenti-vetro-immobili,,,,,,
+Non impostato,rifiniture-immobili,,,,,,
+Standard,rifiniture-immobili,,,,,,
+Standing medio/alto,rifiniture-immobili,,,,,,
+Standing elevato,rifiniture-immobili,,,,,,
+Lusso,rifiniture-immobili,,,,,,
+Parzialmente da ristrutturare,stato-immobili,,,,,,
+In fase di costruzione,stato-immobili,,,,,,
+Buono stato,stato-immobili,,,,,,
+Come nuovo,stato-immobili,,,,,,
+Nuovo,stato-immobili,,,,,,
+Videocitofono,dotazioni-immobili,,,,,,
+impianto di allarme,dotazioni-immobili,,,,,,
+Impianto di irrigazione giardino,dotazioni-immobili,,,,,,
+Impianto domotica,dotazioni-immobili,,,,,,
+Tende da sole esterne,dotazioni-immobili,,,,,,
+Tende oscuranti,dotazioni-immobili,,,,,,
+Tapparelle elettriche,dotazioni-immobili,,,,,,
+Zanzariere,dotazioni-immobili,,,,,,
+Camino,dotazioni-immobili,,,,,,
+Sauna/Bagno turco,dotazioni-immobili,,,,,,
+Jacuzzi,dotazioni-immobili,,,,,,
+Piscina,dotazioni-immobili,,,,,,
+Locale fitness,dotazioni-immobili,,,,,,
+Sala Home cinema,dotazioni-immobili,,,,,,
+Sala riunioni condominiale,dotazioni-immobili,,,,,,
+Deposito biciclette,dotazioni-immobili,,,,,,
+Deposito moto,dotazioni-immobili,,,,,,
+Lift/ascensore,dotazioni-immobili,,,,,,
+Sistema per disabili,dotazioni-immobili,,,,,,
+Deposito attrezzi,dotazioni-immobili,,,,,,
+Da ristrutturare interamente ,stato-immobili,,,,,,
+Non impostato,stato-immobili,,,,,,
+Pompa di Calore aria-acqua,impianto-riscaldamento-immobili,,,,,,
+Vetri Anti-sfondamento,dotazioni-immobili,,,,,,
+(non impostata),condizione-bp,"Questo Piano non verrà elaborato con una condizione ma è ""libero""",,,,,
+Pericolo,condizione-bp,"<p><strong>Consiglio generale e spiegazione:</strong></p>
+
+<p>Questa operativit&agrave; ed i relativi passi si applicano quando la tua statistica scende ripidamente verso il basso, in questo caso non va a zero o non &egrave; a zero come nello stato operativo precedente ma quando la discesa &egrave; ripida e tende molto verso il basso, ad esempio se la settimana scorsa hai fatto 10 appuntamenti e questa settimana ne hai fatti 4, significa che quella specifica statistica &egrave; drasticamente calata e se non viene fatto qualcosa per invertire e stabilizzare, ovviamente si rischia di trovarsi con un pericolo per quanto riguarda la produzione.&nbsp;</p>
+
+<p>Applicando i passi che seguono e sviluppando un piano di lavoro composto da singole azioni mirate per svolgerli tutti uno dopo l&rsquo;altro, si potr&agrave; migliorare l&rsquo;operativit&agrave; e passare alla condizione successiva.</p>
+
+<p><strong>Quando sei in questo stato operativo dovrai fare i seguenti passi come indicati e in sequenza:</strong></p>
+
+<ol>
+	<li><strong>Mettere da parte le attuali abitudini e darsi da fare tempestivamente</strong>. Cio&rsquo; significa semplicemente che dovrai cambiare quelle abitudini che ti hanno portato in questa condizione. (nel caso stessi cercando di risolvere questo per quanto riguarda gli appuntamenti di vendita potrebbe comportare il non fare orari ridotti di lavoro per andare a giocare alle slot machine al bar, oppure semplicemente non fermarti piu&rsquo; a chiacchierare due ore al giorno con il vicino di casa al posto di contattare clienti per fissare gli appuntamenti &ndash; questi sono ovviamente esempi per farti comprendere quali potrebbero essere delle abitudini che andrebbero messe da parte). Semplicemente significa evitare ogni abitudine che ti ha portato ad avere un cosi&rsquo; importante abbassamento della tua produzione, trovando quali sono ed evitandole il piu&rsquo; possibile.<br />
+	&nbsp;</li>
+	<li><strong>Risolvi la situazione e qualsiasi problema potrebbe arrecarti</strong>. Molto semplicementre questo significa porre rimedio alla situazione e risolvere cio&rsquo; che potrebbe accadere se non lo fai. Ad esempio, sempre nel caso degli appuntamenti, questo punto potrebbe richiedere che tu ti metta a contattare tutti i clienti per una giornata intera e fissare con loro appuntamenti in quantit&agrave; cosi che tu non corra il rischio di trovarti con pochi o addirittura senza appuntamenti. In parole povere, attivati subito per invertire questa discesa e risolvi la situazione cosi da metterti &ldquo;in salvo&rdquo;<br />
+	&nbsp;</li>
+	<li><strong>Assegnati uno stato operativo di PERICOLO</strong>. Questo &egrave; semplicemente rendersi consapevoli che la situazione &egrave; da risolvere e questo va fatto nel minor tempo possibile cosi da non adagiarsi e da non incappare in ulteriori peggioramenti.<br />
+	&nbsp;</li>
+	<li><strong>Usa su te stesso la disciplina per rimetterti in carreggiata e per riprendere una condotta ideale sia dal punto di vista etico che produttivo</strong>. Questo passo significa che dovrai esaminare quali sono le cose che stai facendo o non facendo che secondo te non corrispondono ad un&rsquo;etica ottimale e quindi che non sono conformi a cio&rsquo; che sai dovrebbe essere fatto, sia in termini di correttezza verso te stesso o verso gli altri sia in termini di produzione ottimale. A volte si tratta anche di piccole cose, come ad esempio arrivare in ritardo agli appuntamenti o al lavoro, oppure assentarsi senza motivazioni per fare altro.<br />
+	&nbsp;</li>
+	<li><strong>Riorganizza la tua attivit&agrave; in modo che questa situazione non si ripresenti continuamente</strong>. Questo comporta un po&rsquo; di organizzazione, prendendo sempre come esempio gli appuntamenti di vendita, potrebbe essere il dedicare una certa quantit&agrave; di tempo prestabilita ogni giorno per contattare i clienti interessati, oppure stabilire una schedula di lavoro che ti permetta di svolgere al meglio sia le attivit&agrave; organizzative sia gli appuntamenti. Semplicemente significa mettere organizzazione adeguata per evitare il ripetersi di questa situazione rendendosi stabili nei miglioramenti.<br />
+	&nbsp;</li>
+	<li><strong>Decidi che questa situazione non si verificher&agrave; piu in futuro, stabilendo una condotta molto salda che ti prometti di mantenere e che ti permetta di individuare una situazione simile prima che si possa verificare di nuovo</strong>. Questo punto ha molto a che fare con una decisione di comportarti sempre, d&rsquo;ora in poi, in un deteminato modo, ad esempio: &ldquo;decido che ogni settimana non mi adagio e mi impegno per avere sempre tanti appuntamenti fissati rispettando i miei impegni lavorativi e seguendo il piano organizzativo che ho stabilito al punto 5&rdquo;.&nbsp;</li>
+</ol>
+",,,,,
+Emergenza,condizione-bp,"<p><strong>Consiglio generale e spiegazione:</strong>&nbsp;</p>
+
+<p>Questa operativit&agrave; ed i relativi passi si applicano quando la tua statistica scende un po&rsquo; verso il basso oppure quando rimane sullo stesso livello in cui era la settimana precedente. Questo stato operativo &egrave; migliore di quello di PERICOLO ma non ancora uno stato ottimale poich&eacute;, se non si fa qualcosa per porvi rimedio, potrebbe peggiorare ancora di piu&rsquo;. Facendo sempre l&rsquo;esempio degli appuntamenti di vendita, potrebbe essere che la settimana scorsa ne hai fatti 10 mentre quella successiva 8. Questo sigifica che la statistica &egrave; scesa un po&rsquo;, oppure se ne hai fatti 10 sia la settimana precedente sia quella successiva. <u>Applicando i passi che seguono e sviluppando un piano di lavoro composto da singole azioni mirate per svolgerli tutti uno dopo l&rsquo;altro, si potr&agrave; migliorare l&rsquo;operativit&agrave; e passare alla condizione successiva.</u></p>
+
+<p><strong>Quando sei in questo stato operativo dovrai fare i seguenti passi come indicati e in sequenza:</strong></p>
+
+<ol>
+	<li><strong>Produci</strong>. Questo passo &egrave; davvero molto semplice quanto fondamentale. Significa rimboccarsi le maniche e mettersi a produrre. Per produzione intendiamo ottenere qualcosa che sia di valore e che abbia a che fare con il proprio ruolo nell&rsquo;attivit&agrave;. Potrebbe significare semplicemente chiamare tutti i clienti e ottenere appuntamenti di vendita fissati in quantit&agrave;. Anche promuovere potrebbe avere un ruolo fondamentale in questo primo passo, promuovere potrebbe significare anche il mandare email invitando tutti i clienti a conoscere i prodotti nuovi. Un passo importante che ti consiglia di darti da fare e produrre per far migliorare questo stato operativo che un po &egrave; peggiorato rispetto a prima o che &egrave; rimasto in stallo senza migliorare.<br />
+	&nbsp;</li>
+	<li><strong>Cambia metodo e abitudini operative</strong>. In questo passo si deve assicurarsi che il metodo usato in precedenza o le azioni che si svolgevano, le quali ci hanno portato evidentemente ad avere un peggioramento, vengano sostiuite con una nuova routine di lavoro piu&rsquo; efficace. Potrebbe semplicemente significare non usare solo le email per comunicare ma iniziare o riprendere a fare telefonate cosi&rsquo; da poter comunicare con i clienti potendo risolvere eventuali obiezioni, oppure andarli a trovare personalmente. Questo passo ha molto a che fare con il modo in cui operi e se hai osservato che il metodo precedente ti ha portato ad un peggioramento allora lo dovrai modificare in parte o adottarne uno nuovo e migliore.<br />
+	&nbsp;</li>
+	<li><strong>Economizza e</strong> <strong>riduci il piu possibile gli sprechi</strong>,&nbsp; e questo vale sia in termini di tempo sia di azioni superflue e dispersive ed ha a che fare con ottimizzare ogni cosa al fine di eliminare il superfluo, focalizzandosi solo sulle cose realmente produttive. Potrebbe significare dedicarsi solo a clienti che hanno realmente mostrato interesse, oppure concentrarsi in modo particolare solo sulle azioni basilari che sappiamo essere concrete e decisive per incrementare la produzione.<br />
+	&nbsp;</li>
+	<li><strong>Assicurati che sia tutto pronto per consegnare il tuo prodotto</strong>. Se il tuo prodotto sono &ldquo;vendite portate a buon fine&rdquo;, in questo passo dovrai assicurarti che ogni elemento necessario alla vendita sia pronto e che ogni dettaglio, documento o informazione sia disponibile per arrivare al dunque e poter quindi consegnare. Questo passo &egrave; importante poich&eacute;, facendo i passi precedenti, avrai&nbsp; creato i presupposti per consegnare il tuo prodotto e dovrai essere quindi pronto per farlo con tutto cio&rsquo; che ti serve, senza rischiare che qualcosa manchi sul piu&rsquo; bello. Per fare un esempio semplice, immagina di essere un negoziante di scarpe che ha fatto tanta pubblicit&agrave;, ha creato tutti i presupposti per vendere e ora si ritrova con tanti clienti in negozio ma non ha a disposizione sufficienti scatole con le scarpe da poter consegnare a chi le vorr&agrave; acquistare. Quindi arrivato a questo punto assicurati di poter consegnare cio&rsquo; che dovrai con tutto in ordine per poterlo fare velocemente.<br />
+	&nbsp;</li>
+	<li><strong>Rendi piu&rsquo; rigida la disciplina</strong>. Questo ti sevir&agrave; a darci dentro per evitare che questa situazione si verifichi di nuovo. Ad esempio potresti decidere che d&rsquo;ora in poi ti darai da fare di piu&rsquo; e che produrrai maggiormente aumentando il tuo orario di lavoro e le tue azioni di produzione e facendolo con costanza e senza ragionevolezza o scuse.</li>
+</ol>",,,,,
+Normale Operatività,condizione-bp,"<p><strong>Consiglio generale e spiegazione:</strong></p>
+
+<p>Questa operativit&agrave; ed i relativi passi si applicano quando la tua statistica sale un po&rsquo; rispetto alla settimana precedente.&nbsp;</p>
+
+<p>Cio&rsquo; significa che quello che stai facendo e che hai fatto &egrave; sicuramente buono, visto che la statistica migliora. Non si tratta di una salita vertiginosa, poich&egrave; quella sarebbe una ABBONDANZA e la vedremo nello step successivo, pero&rsquo; sta salendo anche di poco quindi, quando il grafico indica una leggera o discreta salita rispetto alla settimana precedente, si applicheranno i passi che seguono poich&eacute; questo &egrave; uno stato operativo ideale e che ci consente di crescere costantamente e quindi raggiungere maggiore espansione sul nostro lavoro e attivit&agrave;.&nbsp; Un esempio sempre sugli appuntamenti di vendita potrebbe essere che la settimana precedente ne hai fatti 8 e quella successiva ne hai fatti 9 oppure 10, quella sarebbe una condizione di NORMALE OPERATIVITA&rsquo;. Significa un leggero e costante miglioramento.&nbsp;</p>
+
+<p><u>Applicando i passi che seguono e sviluppando un piano di lavoro composto da singole azioni mirate per svolgerli tutti uno dopo l&rsquo;altro, si potr&agrave; migliorare l&rsquo;operativit&agrave; e passare alla condizione successiva.</u></p>
+
+<p><strong>Quando sei in questo stato operativo dovrai fare i seguenti passi come indicati e in sequenza:</strong></p>
+
+<ol>
+	<li><strong>Non cambiare a</strong>. In questo passo &egrave; fondamentale che ogni cosa che ci ha permesso di migliorare non venga cambiata, poich&eacute; se cio&rsquo; che abbiamo fatto ci ha portato ad un miglioramento,&nbsp; significa che &egrave; per lo piu corretto. Quindi assicurati di scrivere tutto cio&rsquo; che hai fatto la settimana o il periodo precedente e non cambiarlo assolutamente. Se hai fatto due ore di telefonate al giorno ad esmepio per fissare gli appuntamenti di vendita, allora continua a fare due ore di telefonate al giorno e impostale nello stesso modo in cui le avevi impostate la settimana precedente poich&eacute; significa che quella azione &egrave; stata efficace.<br />
+	&nbsp;</li>
+	<li><strong>Non intraprendere nessuna azione di disciplina particolare</strong> poich&eacute; cio&rsquo; che stai facendo &egrave; maggiormente buono quindi dovrai solo continuare in quella direzione.<br />
+	&nbsp;</li>
+	<li><strong>Ogni volta che la statistica ha un miglioramento, analizzala e scopri cosa l&rsquo;ha fatta migliorare e rafforzalo</strong>. Se ad esempio vedi che dicendo una determinata frase o usando un determinato sistema per fare le chiamate, gli appuntamenti fissati salgono, allora assicurati che quel modo di farle, venga mantenuto e rafforzato. Questo ci permette di consolidare sempre ogni miglioramento cosi&rsquo; da avere uno stato operativo sempre in crescita. Se qualcosa ha funzionato non cambiarlo.<br />
+	&nbsp;</li>
+	<li><strong>Ogni volta che la statistica peggiora un po&rsquo; scorpri subito cosa l&rsquo;ha fatta peggiorare e rimedia</strong>. Ad esmepio se osservi che dedicare del tempo ad una determinata azione ti distoglie dalla produzione effettiva e crea un calo della statistica, allora sospendi o limita quell&rsquo;azione e riprendi a fare cio&rsquo; che ti stava dando reali risultati oggettivi.</li>
+</ol>
+
+<p><strong>NOTA:</strong> Come vedi, parte di questa condizione ha molto a che fare con il tenere sott&rsquo;occhio l&rsquo;andamento delle statistiche anche su base giornaliera, cosi&rsquo; da assicurarsi che i miglioramenti vengano consolidati e che i piccoli peggioramenti vengano subito risolti. Facendo questo potrai far si che ogni settimana la tua produzione migliori sempre e potrai aggiustare sempre di piu&rsquo; il tiro per far si che cio&rsquo; avvenga con sempre meno sforzo e con maggiore velocit&agrave;.&nbsp;</p>",,,,,
+Abbondanza,condizione-bp,"<p><strong>Consiglio generale e spiegazione:</strong></p>
+
+<p>Questo stato operativo &egrave; di sicuro uno dei piu&rsquo; delicati da gestire e si presenta quando nella statistica di produzione avviene un picco e sale molto rispetto alla settimana precendete. Non si tratta di una piccola crescita ma di una crescita davvero importane e significativa. Sempre prendendo come esempio gli appuntamenti divendita, un&rsquo;ABBONDANZA potrebbe essere che la settimana precednete nei hai ottenuti 10 e quella successiva 15 o 18 quindi una grande impennata rispetto al periodo precedente. Sar&agrave; davvero&rsquo; fondanentale, cosi come negli step precedenti, assicurarsi di fare tutti i passi della formula uno dopo l&rsquo;altro poich&eacute;, quando si verifica un cosi importante incremento, &egrave; davvero molto facile che se non si fanno tutte le azioni corette questo possa andare perso. Spesso nel lavoro o nella vita quando si ragiunge una grande ABBONDANZA si ha la tendenza ad adagiarsi oppure a smettere di fare cio&rsquo; che ci ha portato in quella condizione, quindi quando ci si trova in questo stato operativo sar&agrave; davvero fondamentale, ancora piu&rsquo; di prima, eseguire i passi uno dopo l&rsquo;altro come descritto di seguito, cosi da poterla mantenere. Questo si applica sia per la azioni (prodotti come ad esempio appuntamenti di vendita, mandati, richieste ricevute cosi anche come le finanze &ndash; in questo caso tratandosi di un&rsquo;applicazione relativa alle azioni, elenchero&rsquo; i passi da fare nell&rsquo;ambito appunto l&rsquo;azione e non per l&rsquo;aspetto finanziario poich&eacute; non avrebbe direttamente a che fare con il tuo ruolo in questa attivit&agrave; e poich&eacute; vi &egrave; una formula specifica che si applica per le finanze).</p>
+
+<p><u>Applicando i passi che seguono e sviluppando un piano di lavoro composto da singole azioni mirate per svolgerli tutti uno dopo l&rsquo;altro, si potr&agrave; migliorare l&rsquo;operativit&agrave; stabilizzandosi su un livello molto alto in quanto produzione e risultati.</u></p>
+
+<p><strong>Quando sei in questo stato operativo dovrai fare i seguenti passi come indicati e in sequenza:</strong></p>
+
+<ol>
+	<li><strong>Economizza le azioni ed elimina quelle dispersive e superflue e che non hanno portato al raggiungimento di questa condizione</strong>. Assicurati di intraprendere solo quelle attivit&agrave; che hanno determinato questo raggiungimento e cerca di ridurre a zero cio&rsquo; che ti distolga dalle azioni di successo. Ad esmepio, se hai osservato che contattare clienti poco qualificati e non piu&rsquo; interessati ad acquistare ti porta via del tempo prezioso che potresti invece dedicare a contattare i nuovi clienti, desiderosi di acquistare, allora concentrati solo su questi ultimi e quindi economizza il tuo tempo evitando o riducendo al minimo i contatti con i vecchi clienti poich&eacute; cio&rsquo; ti porta via energie e tempo prezioso. Economizza dedicandoti solo ad azioni determinanti e che sai essere di successo.<br />
+	&nbsp;</li>
+	<li><strong>Fai si che ogni azione conti e non dedicarti a quelle inutili e dispersive e fai in modo che ogni nuova azione contribuisca davvero ad incrementare la produzione e che sia dello stesso tipo di quelle che hanno causato il miglioramento</strong>. In questo caso, se decidi di intraprendere nuove azioni, fallo ma assicurandoti che siano simili a quelle che hanno contribuito veramente. Se ad esmpio hai notato che contattare nuovi clienti per fissare appuntamenti e presentando i nuovi prodotti ha portato ad un grande miglioramento della statistica, allora potrai eventualemente decidere di aggiungere l&rsquo;azione di inviare anche una e-mail a tutti i nuovi clienti con la presentazione dei nuovi prodotti intensificando ulteriormente quell&rsquo;azione di promozione facendola anche per e-mail oltre che al telefono ma senza smettere di fare cio&rsquo; che ha portato il risultato.<br />
+	&nbsp;</li>
+	<li><strong>Rafforza e consolida ogni miglioramento ottenuto e non permettere che le cose peggiorino</strong>. Assicurati che ogni miglioramento venga consolidato e reso stabile cosi che la produzione non subisca alti e bassi. In questo punto dovrai fare in modo che tutte le azioni che hanno causato l&rsquo;attuale condizione vengano rese stabili e andranno idealmente scritte e messe sotto forma di &ldquo;regola generale&rdquo; da seguire ogni giorno cosi che questo stato operativo venga reso solido e costante. Se hai notato ad esempio che, facendo le chiamante ai clienti usando un preciso modello e dicendo determinate cose, ti ha portato ad avere un reale incremento di produzione e quindi ti ha fatto avere un&rsquo;abbondanza di appuntamenti, allora prendi quel modello e usalo come standard per le tue chiamate, applicandolo con piu clienti possibili e facendo in modo che costiuisca il modello per ogni comunicazione che userai. Assicurati quindi di rendere davvero stabile ogni singolo miglioramento che hai ottenuto e questo ti porter&agrave; a mentenere stabile e abbondante la condizione.<br />
+	&nbsp;</li>
+	<li><strong>Scopri cosa ha causato la condizione di abbondanza nella tua area lavorativa e rafforzalo</strong>. In questo punto dovrai fare un&rsquo;analisi per scoprire davvero tutte quelle azioni e metodi operativi che hanno causato questa condizione e una volta che le avrai scoperte assicurarti di renderle davvero stabili, possibilmente incrementandole sempre di piu&rsquo; e rafforzandole. Potrebbe darsi che, dopo aver fatto l&rsquo;analisi, scoprirai che ci sono tre azioni specifiche che hanno causato il miglioramento della statistica. Dopo averle scoperte assicurati di renderle stabili e di effettuarle ogni settimana e metterle come parte del tuo piano di lavoro.</li>
+</ol>",,,,,
+Non Esistenza,condizione-bp,"<p><strong>Consiglio generale e spiegazione:&nbsp;</strong></p>
+
+<p>Questa operativit&agrave; e quindi questi passi vanno applicati quando la statistica o le statistiche della tua produzione sono a zero, poich&eacute; sei nuovo sul posto che ricopri oppure se cadono a zero dopo che erano salite. Questa sequenza, fatta un passo dopo l&rsquo;altro, ti permetter&agrave; di migliorare questo stato operativo e passare a quello successivo. Una volta che avrai letto e compreso i passi seguenti, potrai creare un piano di lavoro settimanale gi&agrave; suddiviso in singoli passi, cosi che tu possa stabilire ogni tuo obiettivo tenendo conto di questa sequenza di azioni le quali, se fatte in modo corretto e una dopo l&rsquo;altra, ti permetteranno di migliorare le tue statistiche e la tua operativit&agrave;.&nbsp;</p>
+
+<p><strong>Quando sei in questo stato operativo dovrai fare i seguenti passi nella sequenza che segue:</strong></p>
+
+<ol>
+	<li><strong>Mettiti in contatto con tutti coloro dei quali avrai bisogno per fornire e ricevere le informazioni e i dati relativi ai tuoi compiti e a cio&rsquo; che ti serve per operare.</strong> Ad esempio i clienti, gli altri membri del personale, eventuali collaboratori. Lo scopo &egrave; far si che chi debba conoscerti possa entrare in contatto con te. Quindi questo punto prevede che tu ti metta in contatto con ognuno di essi cosi da poter far fluire informazioni. (Ad esemio: contattare tutti i clienti interessati, oppure mettersi in contatto con i propri colleghi di lavoro).<br />
+	&nbsp;</li>
+	<li><strong>Fatti conoscere</strong>, informando ognuna di queste persone su quale &egrave; il tuo ruolo e facendo presente ad ognuno di loro di cosa ti occupi e quali azioni svolgi esattamente, cosi che in futuro possano rivolgersi a te per le specifiche funzioni che ricopri. Questo punto ha lo scopo di far sapere chi sei e di cosa ti occupi a clienti, superiori, collaboratori ed ogni persona con la quale dovrai avere a che fare nel tuo lavoro.&nbsp;<br />
+	<br />
+	<strong>NOTA: A volte puo&rsquo; capitare, nel caso in cui tu abbia gi&agrave; fatto questo punto quanto sei entrato a far parte dell&rsquo;attivit&agrave;, che la tua statistica cada nuovamente a zero, anche per il solo esserti assentato per le vacanze, quindi in ogni caso sar&agrave; importante, se la statistica &egrave; caduta a zero o quasi, rifare questi passi per ripristinare quantomeno il contatto con ognuna delle persone del punto 1 e 2 e quindi rimetterti all&rsquo;opera facendo sapere che sei rientrato e che ora sei disponibile e in attivit&agrave;.</strong><br />
+	&nbsp;</li>
+	<li><strong>Chiedi ad ogni persona con la quale dovrai avere a che fare, sia clienti che collaboratori o altri, cosa ognuno di loro necessit&agrave; da te in qualit&agrave; di incaricato del posto che ricopri. </strong>Questo potrebbe anche significare chiedere ai singoli clienti quali necessit&agrave; esattamente hanno e cosa desiderano per essere accontentati ,oppure sapere che cosa i tuoi colleghi vorrebbero che tu facessi per permettere loro di lavorare in coordinazione e con sempre maggiori risultati. Lo scopo di questo punto &egrave; sapere cosa &egrave; richiesto, &nbsp;sia da chi dovrai servire in qualit&agrave; di cliente o dai tuoi colleghi e superiori nell&rsquo;ambito lavorativo, cosi che tu possa concentrarti su cio&rsquo; e sapere realmente cosa &egrave; desiderato da ognuno di loro.<br />
+	&nbsp;</li>
+	<li><strong>Nel rispetto delle regole basilari e delle funzioni che sai di dover ricoprire, assicurati di produrre e presentare cio&rsquo; che hai scoperto al punto tre e quindi cio&rsquo; che &egrave; stato richiesto come desiderabile da clienti e colleghi.</strong> Questo punto viene fatto poich&eacute; ci&ograve;&nbsp;che dovrai produrre dovrebbe essere in linea con le esigenze e le richieste delle persone con le quali ti relazioni per svolgere i tuoi compiti. (a patto ovviamente che ci&ograve;&nbsp;che ti viene richiesto non si allontani dalle regole generali dell&rsquo;attivit&agrave; della quale fai parte e dalle funzioni del tuo posto).</li>
+</ol>
+
+<p><strong>NOTA:</strong> Assicurati di fare molto bene questi 4 punti e di farli in questa sequenza e una volta che li avrai fatti, mantieni saldi tutti i contatti che hai a quel punto creato e cerca di ottimizzarli sempre e incrementarli e di non perdere mai il flusso di comunicazione poich&eacute; questo ti porta ad essere CONOSCIUTO e APPREZZATO e soprattutto potrai ampliare la tua sfera di influenza all&rsquo;interno e all&rsquo;esterno dell&rsquo;attivit&agrave;. Questo stato operativo si completa quando i passi da 1 a 4 sono stati fatti tramite azioni singole e specifiche, quindi selezionando la voce relativa come scelta verranno creati i passi del tuo piano di lavoro settimanale gi&agrave; nella sequenza corretta, cosi che tu possa inserire, per ognuno di essi, le singole azioni mirate che permettano di completarli uno dopo l&rsquo;altro.&nbsp;</p>
+",,,,,
+Affitto,vendita-affitto,,,,,,
+Vendita,vendita-affitto,,,,,,
+(Non Impostato),macro-categoria-immobili,,,,,,
+Appartamento,macro-categoria-immobili,,,,,,
+Casa/Villa,macro-categoria-immobili,,,,,,
+Terreno,macro-categoria-immobili,,,,,,
+Stabile di reddito,macro-categoria-immobili,,,,,,
+Altro,macro-categoria-immobili,,,,,,
+Bozza,step-immobili,Immobile in fase di completamento,,,,,
+In Qual,step-immobili,Inserimento dell’immobile completato e inviato a Qual per approvazione,,,,1,
+Reparto Marketing,step-immobili,L’immobile è stato verificato e approvato da Qual e inviato al Reparto Marketing,,,,,2
+Approvato,step-immobili,L’immobile è stato verificato ed è conforme agli standard,,,,3,
+Casa Unifamiliare,categoria-immobili,,,,,,
+Casa Bifamiliare,categoria-immobili,,,,,,
+Casa Plurifamiliare,categoria-immobili,,,,,,
+Villetta a Schiera,categoria-immobili,,,,,,
+Casa di Nucleo,categoria-immobili,,,,,,
+Villa di Lusso,categoria-immobili,,,,,,
+Rustico,categoria-immobili,,,,,,
+Villa d’Epoca,categoria-immobili,,,,,,
+Edificabile Residenziale,categoria-immobili,,,,,,
+Edificabile Commerciale/amministrativo,categoria-immobili,,,,,,
+Edificabile Industriale,categoria-immobili,,,,,,
+Agricolo,categoria-immobili,,,,,,
+Residenziale,categoria-immobili,,,,,,
+Commerciale/Uffici,categoria-immobili,,,,,,
+Misto Residenziale/Commerciale/Uffici,categoria-immobili,,,,,,
+Industriale,categoria-immobili,,,,,,
+Attico,categoria-immobili,,,,,,
+Monolocale,categoria-immobili,,,,,,
+Duplex,categoria-immobili,,,,,,
+Triplex,categoria-immobili,,,,,,
+Quadrilocale,categoria-immobili,,,,,,
+A Falde,tipo-tetto,,,,,,
+Piano,tipo-tetto,,,,,,
+Zona Abitativa Estensiva,zona-destinazione-immobili,,,,,,
+Zona Abitativa Semi Intensiva,zona-destinazione-immobili,,,,,,
+Zona Abitativa Intensiva,zona-destinazione-immobili,,,,,,
+"Zona Mista (Abitativa, Artigianale, Commerciale)",zona-destinazione-immobili,,,,,,
+Ristrutturato,stato-immobili,,,,,,
+Nord,esposizione-solare,,,,,,
+Sud,esposizione-solare,,,,,,
+Ovest,esposizione-solare,,,,,,
+Est,esposizione-solare,,,,,,
+(Non Specificato),fonte-contatti,,,,,,
+Sito Metropolis,fonte-contatti,,,,,,
+immoscout24.ch,fonte-contatti,,,,,,
+immostreet.ch,fonte-contatti,,,,,,
+homegate.ch,fonte-contatti,,,,,,
+immogalaxy.ch,fonte-contatti,,,,,,
+homestreet.ch,fonte-contatti,,,,,,
+homeswiss.ch,fonte-contatti,,,,,,
+tutti.ch,fonte-contatti,,,,,,
+Mail,fonte-contatti,,,,,,
+Altro,fonte-contatti,,,,,,
+Segnalazione,fonte-contatti,,,,,,
+Comparis.ch,fonte-contatti,,,,,,
+Superficie Amministrativa/Commerciale,macro-categoria-immobili,,,,,,
+Vista Aperta,vista-immobili,,,,,,
+Vista Lago,vista-immobili,,,,,,
+Vista Monti,vista-immobili,,,,,,
+Vista Panoramica,vista-immobili,,,,,,
+Estratto del Registro Fondiario,documenti-immobili,1,,,,,
+Polizza Assicurativa Stabile,documenti-immobili,1,,,,,
+Piano di Assegnazione Parti Comuni,documenti-immobili,1,,,,,
+Estratto Spese Condominiali,documenti-immobili,1,,,,,
+Certificato RASI,documenti-immobili,1,,,,,
+Documenti Identità Proprietario,documenti-immobili,1,,,,,
+Verbali di Assemblea degli Ultimi 2 anni,documenti-immobili,1,,,,,
+Estratto del registro Fondiario,documenti-immobili,5,,,,,
+Polizza Assicurativa Stabile,documenti-immobili,5,,,,,
+Piano di Assegnazione Parti Comuni,documenti-immobili,5,,,,,
+Estratto Spese Condominiali,documenti-immobili,5,,,,,
+Certificato RASI,documenti-immobili,5,,,,,
+Documenti Identità Proprietario,documenti-immobili,5,,,,,
+Verbali di Assemblea degli Ultimi 2 anni,documenti-immobili,5,,,,,
+Estratto del Registro Fondiario/Sommarione,documenti-immobili,2,,,,,
+Polizza Assicurativa della Casa,documenti-immobili,2,,,,,
+Certificato RASI,documenti-immobili,2,,,,,
+Mappa del Terreno,documenti-immobili,2,,,,,
+Documenti Identità Proprietario,documenti-immobili,2,,,,,
+Piantine e Planimetrie,documenti-immobili,,,,,,
+Mandato,documenti-immobili,,,,,,
+Riservazione,documenti-immobili,,,,,,
+Documenti Identità Acquirenti,documenti-immobili,,,,,,
+Altri documenti,documenti-immobili,,,,,,
+Attivo,gestione-immobili,,,,,,
+Venduto da Metropolis,gestione-immobili,,,,,,
+Venduto dal proprietario,gestione-immobili,,,,,,
+Riservato,gestione-immobili,,,,,,
+Mandato Scaduto,gestione-immobili,,,,,,
+Mandato Anato,gestione-immobili,,,,,,
+Archiviato,gestione-immobili,,,,,,
+Affittato da Metropolis,gestione-immobili,,,,,,
+Affittato da terzi,gestione-immobili,,,,,,
+Venduto da terzi,gestione-immobili,,,,,,
+Giardino Condominiale,dotazioni-immobili,,,,,,
+Parco Giochi,dotazioni-immobili,,,,,,
+Regolamento Condominiale,documenti-immobili,,,,,,
+Regolamento Condominiale,documenti-immobili,,,,,,
+Regolamento Condominiale,documenti-immobili,,,,,,
+Regolamento Condominiale,documenti-immobili,,,,,,
+Riservato,stato-contatti,,,,,,
+Certificato RASI,documenti-immobili,4,,,,,
+Estratto del Registro Fondiario,documenti-immobili,4,,,,,
+Polizza Assicurativa Stabile,documenti-immobili,4,,,,,
+Piano di Assegnazione Parti Comuni,documenti-immobili,4,,,,,
+Estratto Spese Condominiali,documenti-immobili,4,,,,,
+Documenti Identità Proprietario,documenti-immobili,4,,,,,
+Verbali di Assemblea degli Ultimi 2 anni,documenti-immobili,4,,,,,
+Fattura di Mediazione,documenti-immobili,0,,,,,
+#613C8B,color-calendar,,,,,,
+#068843,color-calendar,,,,,,
+#DCA24C,color-calendar,,,,,,
+#213A90,color-calendar,,,,,,
+#000,color-calendar,,,,,,
+#65517F,color-calendar,,,,,,
+#7658AS,color-calendar,,,,,,
