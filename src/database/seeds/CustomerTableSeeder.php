@@ -22,7 +22,6 @@ class CustomerTableSeeder extends Seeder
                 'fname'     => $faker->firstName,
                 'lname'     => $faker->lastName,
                 'phone'     => $faker->PhoneNumber,
-                'phone'     => $faker->PhoneNumber,
                 'CF'        => $faker->taxId(),
                 'address'   => $faker->streetName,
                 'city'      => $faker->city,
@@ -30,7 +29,7 @@ class CustomerTableSeeder extends Seeder
                 'PIVA'      => $faker->vatId(),
                 'company'   => $faker->company,
                 'district'  => $faker->stateAbbr,
-                'email'     => $faker->email,
+                'email'     => $faker->safeEmail,
                 'kind'      => $faker->randomElement(['agent', 'customer', 'autoshop', 'insurance']),
             ]);
         }
