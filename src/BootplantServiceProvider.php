@@ -104,6 +104,9 @@ class BootplantServiceProvider extends ServiceProvider
         Blade::component('bootplant::components.sidebar.dropdown-' . config('bootplant.app_menu_position'), 'dropdown');
         Blade::component('bootplant::components.sidebar.dropdown-item', 'dropdownitem');
 
+        //Pannello azioni
+        Blade::component('bootplant::components.registry-actions', 'registryactions');
+
         //Tabs
         Blade::component('bootplant::components.tabs.tab-block', 'tabs');
         Blade::component('bootplant::components.tabs.tab', 'tab');
