@@ -31,3 +31,4 @@
 <meta name="apple-mobile-web-app-title" content="{{config('bootplant.app_name')}}">
 <meta name="theme-color" content="#17BE66">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+@yield('extrastyle')

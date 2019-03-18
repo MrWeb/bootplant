@@ -26,4 +26,5 @@ table_name = '{{$table}}';
 <script type="text/javascript" src="{{asset('js/table-models.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootplant-tables.js')}}"></script>
 @endisset
+@yield('extrascripts')
 {{-- <script src="scripts/app/app-analytics-overview.1.3.0.js"></script> --}}
