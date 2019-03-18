@@ -26,6 +26,17 @@ const VuePlugin = {
 }
 vueUse(VuePlugin);
 export default VuePlugin;
+//Currency
+import VueCurrencyFilter from 'vue-currency-filter';
+Vue.use(VueCurrencyFilter, {
+  symbol : '€',
+  thousandsSeparator: "'",
+  fractionCount: 2,
+  fractionSeparator: '.',
+  symbolPosition: 'back',
+  symbolSpacing: true
+});
+//End Currency
 Vue.component('vue-search', require('../vue-components/VueSearch.vue').default);
 Vue.component('vue-search-small', require('../vue-components/VueSearchSmall.vue').default);
 Vue.filter('money', function (value, symbol) {
@@ -36,12 +47,11 @@ window.mixin = {
     data: function () {
         return {
             loading: true,
-            edited: false,
         }
     },
     methods: {
         valuta: function (input) {
-            this.input.replace(/,/g, '.')
+            input.replace(/,/g, '.');
         },
         urlParam(key) {
             let url = new URLSearchParams(document.location.search.substring(1));
@@ -108,12 +118,8 @@ window.mixin = {
             window.history.back();
         },
         //Vai a pagina specifica: page('orders')
-        page(pg, blank = false) {
-            if (blank) {
-                window.open(base_url + '/' + pg);
-            } else {
-                window.location.href = base_url + '/' + pg;
-            }
+        page(pg) {
+            window.location.href = base_url + '/' + pg;
         },
         watchForChanges(arryOfModels, callback) {
             let that = this;
@@ -122,35 +128,6 @@ window.mixin = {
                     deep: true
                 })
             })
-        },
-        asyncPost(where, data, then) {
-            axios.post(`${base_url}/${where}`, data).then((response) => {
-                then(response.data)
-            }).catch((error) => {
-                notify({
-                    error: error
-                });
-            })
-        },
-        tipologia(field) {
-            switch (field) {
-            case 'quote':
-                return {
-                    text: 'Preventivo',
-                    color: 'success'
-                }
-            case 'forfait':
-                return {
-                    text: 'Prezzo Forfait',
-                    color: 'secondary'
-                }
-            case 'big':
-                return {
-                    text: 'Grande Progetto',
-                    color: 'primary'
-                }
-            }
-            return {}
         }
     },
     filters: {
