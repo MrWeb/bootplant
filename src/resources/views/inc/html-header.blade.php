@@ -8,7 +8,6 @@
 <link href="{{asset('bootplant/css/font-awesome.min.css')}}" rel="stylesheet"/>
 <link href="{{asset('bootplant/css/material-icons.css')}}" rel="stylesheet">
 <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-{{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
 <link rel="stylesheet" data-version="{{config('app_theme_version')}}" href="{{asset('bootplant/css/bootplant.css')}}">
 @if(config('bootplant.app_color'))
   <link rel="stylesheet" href="{{asset('bootplant/css/accents/'.config('bootplant.app_color').'.'.config('bootplant.app_theme_version').'.min.css')}}">
@@ -16,6 +15,7 @@
 <link href="{{asset('css/responsive.dataTables.min.css')}}" rel="stylesheet"/>
 <link href="{{asset('css/animate.css')}}" rel="stylesheet"/>
 <script async defer src="{{asset('bootplant/js/buttons.min.js')}}"></script>
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=dLJYYOG6RG">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=dLJYYOG6RG">
