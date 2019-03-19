@@ -11,7 +11,7 @@ class Meta extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['*'];
+    protected $guarded = [];
 
     protected $dates = [
         'created_at',
@@ -50,5 +50,11 @@ class Meta extends Model
     public function group()
     {
         return $this->belongsTo(MetaGroup::class, 'meta_group_slug');
+    }
+
+    public static function values($group)
+    {
+        //Uso Meta::values('slug')->get()
+        return self::where('group', '=', $group);
     }
 }

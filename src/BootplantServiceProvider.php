@@ -16,15 +16,17 @@ class BootplantServiceProvider extends ServiceProvider
             __DIR__ . '/config/bootplant.php' => config_path('bootplant.php'),
         ], 'config');
 
-        $this->app['router']->group(['namespace' => 'Futurelabs\Bootplant\Http\Controllers'], function () {
-            require __DIR__ . '/routes.php';
-        });
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
+        // $this->app['router']->group(['namespace' => 'Futurelabs\Bootplant\Http\Controllers'], function () {
+        //     require __DIR__ . '/routes/web.php';
+        // });
 
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
-        $this->publishes([
-            __DIR__ . '/resources/views' => base_path('resources/views/vendor/bootplant'),
-        ], 'views');
+        // $this->publishes([
+        //     __DIR__ . '/resources/views' => base_path('resources/views/vendor/bootplant'),
+        // ], 'views');
 
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'bootplant');
 
@@ -32,6 +34,7 @@ class BootplantServiceProvider extends ServiceProvider
             __DIR__ . '/resources/assets/images'   => public_path('bootplant/images'),
             __DIR__ . '/resources/assets/fonts'    => public_path('bootplant/fonts'),
             __DIR__ . '/resources/assets/webfonts' => public_path('bootplant/webfonts'),
+            __DIR__ . '/public/bootplant'          => public_path('bootplant'),
             __DIR__ . '/resources/assets/css'      => public_path('bootplant/css'),
             __DIR__ . '/resources/assets/publicjs' => public_path('bootplant/js'),
         ]);
@@ -51,7 +54,6 @@ class BootplantServiceProvider extends ServiceProvider
         }
 
         $this->registerHelpers();
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'bootplant');
         $this->registerBladeComponents();
     }
 

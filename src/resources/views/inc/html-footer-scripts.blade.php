@@ -4,12 +4,11 @@
 <script src="{{asset('bootplant/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('bootplant/js/Chart.min.js')}}"></script>
 <script src="{{asset('bootplant/js/shards.min.js')}}"></script>
-<script src="{{asset('js/classes.js')}}"></script>
+<script src="{{asset('bootplant/js/classes.js')}}"></script>
 <script type="text/javascript">
 let base_url = '{{url('')}}';
 </script>
 <script src="{{asset('js/app.js')}}"></script>
-<script src="{{asset('js/moment.min.js')}}"></script>
 <script src="{{asset('bootplant/js/shards-dashboards.1.3.0.min.js')}}"></script>
 <script src="{{asset('bootplant/js/bootplant.js')}}"></script>
 <!--[if IE]>

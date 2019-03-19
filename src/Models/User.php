@@ -51,4 +51,9 @@ class User extends Authenticatable
         }
         return $this->hasMany($class, 'user_id');
     }
+
+    public function registries()
+    {
+        return $this->brancher(Registry::class);
+    }
 }
