@@ -2,7 +2,7 @@ import './bootstrap.js';
 window.Vue = require('vue');
 import * as components from './../vue-components';
 import * as directives from './../directives';
-import moment from 'moment';
+window.moment = require('moment');
 import {
     vueUse
 } from './../utils'
