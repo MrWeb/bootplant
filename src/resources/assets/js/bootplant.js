@@ -1,4 +1,3 @@
-console.log('17.52');
 import './bootstrap.js';
 window.Vue = require('vue');
 import * as components from './../vue-components';
