@@ -50,6 +50,7 @@ window.mixin = {
     data: function () {
         return {
             loading: true,
+            edited: false,
         }
     },
     methods: {
