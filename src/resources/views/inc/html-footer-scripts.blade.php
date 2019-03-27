@@ -8,9 +8,9 @@
 <script type="text/javascript">
 let base_url = '{{url('')}}';
 </script>
+<script src="{{asset('bootplant/js/bootplant.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('bootplant/js/shards-dashboards.1.3.0.min.js')}}"></script>
-<script src="{{asset('bootplant/js/bootplant.js')}}"></script>
 <!--[if IE]>
 <script type="text/javascript" src="{{asset('js/promise.min.js')}}"></script>
 <![endif]-->
