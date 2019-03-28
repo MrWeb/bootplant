@@ -49748,7 +49748,11 @@ Vue.use(vue_currency_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
 Vue.component('vue-search', __webpack_require__(/*! ../vue-components/VueSearch.vue */ "./src/resources/assets/vue-components/VueSearch.vue").default);
 Vue.component('vue-search-small', __webpack_require__(/*! ../vue-components/VueSearchSmall.vue */ "./src/resources/assets/vue-components/VueSearchSmall.vue").default);
 Vue.filter('money', function (value, symbol) {
-  return Money(value) + " ".concat(symbol);
+  if (value) {
+    return value.toFixed(2);
+  }
+
+  return 0;
 }); // console.log('App running')
 
 window.mixin = {
