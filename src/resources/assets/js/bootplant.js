@@ -120,9 +120,9 @@ window.mixin = {
         //Chiamate aincrone
         asyncPost(go, data, then){
             axios.post(`${base_url}/${go}`, data).then((res) => {
-                // console.log(res)
+                //console.log(res)
                 if(res.status == 200){
-                    then();
+                    then(res.data);
                 }
                 }).catch((err) => {
                 console.error('asyncPost error: '+err)
