@@ -43,10 +43,7 @@ Vue.use(VueCurrencyFilter, {
 Vue.component('vue-search', require('../vue-components/VueSearch.vue').default);
 Vue.component('vue-search-small', require('../vue-components/VueSearchSmall.vue').default);
 Vue.filter('money', function (value, symbol) {
-    if (value) {
-        return value.toFixed(2);
-    }
-    return 0;
+    return Money(value) + ` ${symbol}`;
 });
 // console.log('App running')
 window.mixin = {
