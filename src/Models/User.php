@@ -39,6 +39,11 @@ class User extends Authenticatable
         return $this->belongsTo(Branch::class);
     }
 
+    public function getFullNameAttribute()
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
     public function brancher($class)
     {
         //Prende $class e seleziona i dati in base ai permessi e branch_id
