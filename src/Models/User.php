@@ -18,7 +18,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $append   = ['full_name'];
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -38,11 +37,6 @@ class User extends Authenticatable
     public function branch()
     {
         return $this->belongsTo(Branch::class);
-    }
-
-    public function getFullNameAttribute()
-    {
-        return "{$this->first_name} {$this->last_name}";
     }
 
     public function brancher($class)
