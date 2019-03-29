@@ -18,6 +18,7 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $append   = ['full_name'];
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -50,6 +51,22 @@ class User extends Authenticatable
             return $class::where('branch_id', '=', $this->branch()->pluck('id'));
         }
         return $this->hasMany($class, 'user_id');
+    }
+
+    /**
+     * Mostra solo gli utenti non superadmin e del proprio branch
+     **/
+    public function users()
+    {
+        if ($this->hasRole("superadmin")) {
+            return User::query();
+        }
+
+        if ($this->hasRole("admin")) {
+            return User::where('branch_id', '=', $this->branch()->pluck('id'))->role(['admin', 'agente']);
+        }
+
+        return $this->where('id', 0);
     }
 
     public function registries()
