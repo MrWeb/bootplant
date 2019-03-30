@@ -40,6 +40,18 @@ class User extends Authenticatable
         return $this->belongsTo(Branch::class);
     }
 
+    public function branches()
+    {
+        if ($this->hasRole("superadmin")) {
+            return Branch::query();
+        }
+
+        if ($this->hasRole("admin")) {
+            return Branch::where('id', '=', $this->branch()->pluck('id'));
+        }
+        return $this->belongsTo(Branch::class);
+    }
+
     public function brancher($class)
     {
         //Prende $class e seleziona i dati in base ai permessi e branch_id
