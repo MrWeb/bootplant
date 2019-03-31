@@ -71,16 +71,19 @@ class User extends Authenticatable
     }
 
     /**
-     * Mostra solo gli utenti non superadmin e del proprio branch
+     * Mostra solo gli utenti in base ai ruoli e al proprio branch
+     * Superadmin = tutti
+     * Admin = tutti solo del suo branch
+     * Agente = nessuno
      **/
     public function users()
     {
         if ($this->hasRole("superadmin")) {
-            return User::query();
+            return $this->with('roles');
         }
 
         if ($this->hasRole("admin")) {
-            return User::where('branch_id', '=', $this->branch()->pluck('id'))->role(['admin', 'agente']);
+            return User::where('branch_id', '=', $this->branch()->pluck('id'))->with('roles')->role(['admin', 'agente']);
         }
 
         return $this->where('id', 0);
