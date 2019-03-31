@@ -3,12 +3,17 @@
 namespace Futurelabs\Bootplant\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Futurelabs\Bootplant\Models\Branch;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class BranchController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['permission:edit users']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +21,12 @@ class BranchController extends Controller
      */
     public function index()
     {
-        $branches = Branch::get();
-        return response()->json($branches);
+        $branches = Auth::user()->branches();
+        if ($branches->count() == 1) {
+            $branch = $branches->first();
+            return view('bootplant::admin.branch.edit')->with(compact('branch'));
+        }
+        return view('bootplant::admin.branch.index')->with(['table' => 'branches']);
     }
 
     /**
@@ -27,7 +36,7 @@ class BranchController extends Controller
      */
     public function create()
     {
-        return view('Bootplant::branch.create');
+        return view('bootplant::branch.create');
     }
 
     /**
