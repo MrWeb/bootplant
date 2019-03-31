@@ -3,11 +3,18 @@
 namespace Futurelabs\Bootplant\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['permission:edit users']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +22,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $branches = User::get();
-        return response()->json($branches);
+        return view('bootplant::admin.user.index')->with(['table' => 'users']);
     }
 
     /**
@@ -26,7 +32,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('Bootplant::branch.create');
+        $branches = Auth::user()->branches()->get();
+        return view('bootplant::admin.user.edit')->with(compact('branches'));
     }
 
     /**
@@ -37,21 +44,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if (isset($id)) {
-            $branch = new Branch();
-            if ($branch) {
-                $data = $request->all();
-                if ($branch->validate($data)) {
-                    $branch->fill($data);
-                    $branch->save();
-                    $this->metaDefault($branch->id);
-                    return response()->json($branch);
-                } else {
-                    return response()->json(sprintf('Error: %s', $branch->errors()), 422);
-                }
-            }
-        }
-        return response()->json(['error' => 'Branch not found'], 422);
+        $user = new User;
+
+        $user->branch_id     = $request->branch_id;
+        $user->name          = $request->name;
+        $user->lastname      = $request->lastname;
+        $user->email         = $request->email;
+        $user->internal_code = $request->internal_code;
+        $user->password      = bcrypt($request->email);
+
+        $user->save();
+        $user->assignRole($request->role);
+
+        return redirect('users?n=saved');
     }
 
     /**
@@ -60,9 +65,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Branch $branch)
+    public function show($id)
     {
-        dd($branch);
+        return "ok";
+        // return view('logged.receipt.show')->with(compact('branch', 'receipt', 'order'));
     }
 
     /**
@@ -71,15 +77,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                return response()->json($branch);
-            }
+        $user = User::where('id', $user)->with('roles')->first();
+        //Non può edit Andy Lombardi
+        if ($user->id == 1 && Auth::id() != 1) {
+            return back();
         }
-        return response()->json(['error' => 'Branch not found'], 422);
+
+        $branches = Auth::user()->branches()->get();
+        return view('bootplant::admin.user.edit')->with(compact('user', 'branches'));
     }
 
     /**
@@ -89,22 +96,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                $data = $request->all();
-                if ($branch->validate($data)) {
-                    $branch->fill($data);
-                    $branch->save();
-                    return response()->json($branch);
-                } else {
-                    return response()->json(sprintf('Error: %s', $branch->errors()), 422);
-                }
-            }
+        $user->branch_id     = $request->branch_id;
+        $user->name          = $request->name;
+        $user->lastname      = $request->lastname;
+        $user->email         = $request->email;
+        $user->internal_code = $request->internal_code;
+
+        $user->save();
+
+        if (Auth::user()->can('edit users')) {
+            $user->syncRoles($request->role);
+            return redirect('users/?n=updated');
         }
-        return response()->json(['error' => 'Branch not found'], 422);
+
+        return redirect('dashboard/?n=updated');
     }
 
     /**
@@ -113,23 +120,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                Branch::destroy($id);
-                return response()->json(['error' => null], 200);
-            }
+        if ($user->id == 1) {
+            return back();
         }
-        return response()->json(['error' => 'Branch not found'], 422);
-    }
-
-    private function metaDefault($id)
-    {
-        foreach (MetaDefault::get() as $meta) {
-            $meta['brand_id'] = $id;
-            DB::table("meta")->insert(get_object_vars($meta));
-        }
+        return response()->json($user->delete());
     }
 }

@@ -51,12 +51,10 @@
       <span class="d-none d-md-inline-block">{{Auth::user()->name ?? ''}} {{Auth::user()->lastname ?? ''}}</span>
     </a>
     <div class="dropdown-menu dropdown-menu-small">
-      @can('edit users')
-      <a class="dropdown-item d-none d-sm-block" href="{{url('settings')}}">
-        <i class="material-icons">settings</i>Impostazioni
+      <a class="dropdown-item d-none d-sm-block" href="{{url('users/'.Auth::id().'/edit')}}">
+        <i class="material-icons">person</i>Profilo
       </a>
       <div class="dropdown-divider"></div>
-      @endcan
       <a class="dropdown-item" href="{{url('updatepsw')}}">
         <i class="material-icons">vpn_key</i>Aggiorna Password
       </a>

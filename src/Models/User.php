@@ -46,10 +46,7 @@ class User extends Authenticatable
             return Branch::query();
         }
 
-        if ($this->hasRole("admin")) {
-            return Branch::where('id', '=', $this->branch()->pluck('id'));
-        }
-        return $this->belongsTo(Branch::class);
+        return Branch::where('id', '=', $this->branch()->pluck('id'));
     }
 
     public function brancher($class)
@@ -79,11 +76,11 @@ class User extends Authenticatable
     public function users()
     {
         if ($this->hasRole("superadmin")) {
-            return $this->with('roles');
+            return $this->where('id', '!=', 1)->with('roles');
         }
 
         if ($this->hasRole("admin")) {
-            return User::where('branch_id', '=', $this->branch()->pluck('id'))->with('roles')->role(['admin', 'agente']);
+            return User::where('branch_id', '=', $this->branch()->pluck('id'))->where('id', '!=', 1)->with('roles')->role(['admin', 'agente']);
         }
 
         return $this->where('id', 0);
