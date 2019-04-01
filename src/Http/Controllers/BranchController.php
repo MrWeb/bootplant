@@ -4,6 +4,7 @@ namespace Futurelabs\Bootplant\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use Futurelabs\Bootplant\Models\Branch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,10 +24,15 @@ class BranchController extends Controller
     {
         $branches = Auth::user()->branches();
         if ($branches->count() == 1) {
-            $branch = $branches->first();
-            return view('bootplant::admin.branch.edit')->with(compact('branch'));
+            return redirect('branches/' . $branches->first()->id . '/edit');
         }
         return view('bootplant::admin.branch.index')->with(['table' => 'branches']);
+    }
+
+    public function mybranch()
+    {
+        $branch = Auth::user()->branch()->first();
+        return redirect('branches/' . $branch->id . '/edit');
     }
 
     /**
@@ -36,7 +42,7 @@ class BranchController extends Controller
      */
     public function create()
     {
-        return view('bootplant::branch.create');
+        return view('bootplant::admin.branch.edit');
     }
 
     /**
@@ -47,21 +53,21 @@ class BranchController extends Controller
      */
     public function store(Request $request)
     {
-        if (isset($id)) {
-            $branch = new Branch();
-            if ($branch) {
-                $data = $request->all();
-                if ($branch->validate($data)) {
-                    $branch->fill($data);
-                    $branch->save();
-                    $this->metaDefault($branch->id);
-                    return response()->json($branch);
-                } else {
-                    return response()->json(sprintf('Error: %s', $branch->errors()), 422);
-                }
-            }
-        }
-        return response()->json(['error' => 'Branch not found'], 422);
+        $branch = new Branch;
+
+        $branch->name     = $request->name;
+        $branch->address  = $request->address;
+        $branch->zip      = $request->zip;
+        $branch->city     = $request->city;
+        $branch->district = $request->district;
+        $branch->phone    = $request->phone;
+        $branch->PIVA     = $request->PIVA;
+        $branch->CF       = $request->CF;
+        $branch->website  = $request->website;
+
+        $branch->save();
+
+        return redirect('branches?n=saved');
     }
 
     /**
@@ -72,7 +78,7 @@ class BranchController extends Controller
      */
     public function show(Branch $branch)
     {
-        dd($branch);
+        //
     }
 
     /**
@@ -83,13 +89,8 @@ class BranchController extends Controller
      */
     public function edit($id)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                return response()->json($branch);
-            }
-        }
-        return response()->json(['error' => 'Branch not found'], 422);
+        $branch = Branch::find($id);
+        return view('bootplant::admin.branch.edit')->with(compact('branch'));
     }
 
     /**
@@ -99,22 +100,21 @@ class BranchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Branch $branch)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                $data = $request->all();
-                if ($branch->validate($data)) {
-                    $branch->fill($data);
-                    $branch->save();
-                    return response()->json($branch);
-                } else {
-                    return response()->json(sprintf('Error: %s', $branch->errors()), 422);
-                }
-            }
-        }
-        return response()->json(['error' => 'Branch not found'], 422);
+        $branch->name     = $request->name;
+        $branch->address  = $request->address;
+        $branch->zip      = $request->zip;
+        $branch->city     = $request->city;
+        $branch->district = $request->district;
+        $branch->phone    = $request->phone;
+        $branch->PIVA     = $request->PIVA;
+        $branch->CF       = $request->CF;
+        $branch->website  = $request->website;
+
+        $branch->save();
+
+        return redirect('branches/' . $branch->id . '/edit?n=saved');
     }
 
     /**
@@ -125,14 +125,14 @@ class BranchController extends Controller
      */
     public function destroy($id)
     {
-        if (isset($id)) {
-            $branch = Branch::find($id);
-            if ($branch) {
-                Branch::destroy($id);
-                return response()->json(['error' => null], 200);
-            }
-        }
-        return response()->json(['error' => 'Branch not found'], 422);
+        // if (isset($id)) {
+        //     $branch = Branch::find($id);
+        //     if ($branch) {
+        //         Branch::destroy($id);
+        //         return response()->json(['error' => null], 200);
+        //     }
+        // }
+        // return response()->json(['error' => 'Branch not found'], 422);
     }
 
     private function metaDefault($id)

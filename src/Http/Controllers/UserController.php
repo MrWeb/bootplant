@@ -67,7 +67,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return "ok";
+        //
         // return view('logged.receipt.show')->with(compact('branch', 'receipt', 'order'));
     }
 

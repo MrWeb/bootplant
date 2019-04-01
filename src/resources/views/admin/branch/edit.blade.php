@@ -11,12 +11,12 @@ Agenzia
 
 @section('content')
 @isset($branch)
-<form action="{{url('branchs/'.$branch->id)}}" method="POST">
+<form action="{{url('branches/'.$branch->id)}}" method="POST">
   @csrf
   @method('PUT')
   @endisset
   @empty($branch)
-  <form action="{{url('branchs')}}" method="POST">
+  <form action="{{url('branches')}}" method="POST">
     @csrf
     @endempty
     <div class="row">
@@ -34,7 +34,7 @@ Agenzia
                     <label for="firstName">Nome / Ragione Sociale</label>
                     <input type="text" required class="form-control" v-model="branch.name" name="name" value="{{@$branch->name}}">
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="emailAddress">Email Aziendale</label>
                     <div class="input-group input-group-seamless">
                       <div class="input-group-prepend">
@@ -45,7 +45,7 @@ Agenzia
                       <input type="email" id="emailAddress" required class="form-control" name="email" value="{{@$branch->email}}">
                     </div>
                   </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <label for="phone">Telefono</label>
                     <div class="input-group input-group-seamless">
                       <div class="input-group-prepend">
@@ -54,6 +54,17 @@ Agenzia
                         </div>
                       </div>
                       <input type="text" id="phone" required class="form-control" name="phone" value="{{@$branch->phone}}">
+                    </div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="website">Sito Web</label>
+                    <div class="input-group input-group-seamless">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="material-icons">explore</i>
+                        </div>
+                      </div>
+                      <input type="text" id="website" required class="form-control" name="website" value="{{@$branch->website}}">
                     </div>
                   </div>
                   <div class="form-group col-md-5">
@@ -79,6 +90,14 @@ Agenzia
                     <label for="district">Provincia</label>
                     <input type="text" maxlength="2" id="district" class="form-control" name="district" value="{{@$branch->district}}">
                   </div>
+                  <div class="form-group col-md-6">
+                    <label for="PIVA">P.IVA</label>
+                    <input type="text" maxlength="2" id="PIVA" class="form-control" name="PIVA" value="{{@$branch->PIVA}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="CF">CF</label>
+                    <input type="text" maxlength="2" id="CF" class="form-control" name="CF" value="{{@$branch->CF}}">
+                  </div>
                 </div>
               </div>
             </div>
@@ -95,7 +114,7 @@ Agenzia
             <ul class="list-group list-group-flush">
               {{-- Riassunto Ordine --}}
               <li class="list-group-item p-3">
-                <span class="d-flex mb-2"><i class="material-icons mr-1">vpn_key</i><strong class="mr-1">Codice Agenzia:</strong> {{substr(@$branch->id, 0,8)}}</span>
+                <span class="d-flex mb-2"><i class="material-icons mr-1">vpn_key</i><strong class="mr-1">Codice Agenzia:</strong> {{@$branch->id}}</span>
                 <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i><strong class="mr-1">Creato il:</strong> {{ Carbon\Carbon::parse(@$branch->created_at)->format('d/m/Y H:i') }}</span>
                 <span class="d-flex mb-2"><i class="material-icons mr-1">today</i><strong class="mr-1">Ultima Modifica il:</strong> {{ Carbon\Carbon::parse(@$branch->updated_at)->format('d/m/Y H:i') }}</span>
               </li>
@@ -113,12 +132,12 @@ Agenzia
                     fn: deleteResource,
                     args: {
                       id: branch.id,
-                      resource:'branchs'
+                      resource:'branches'
                     }
                   }
               })" class="btn btn-sm btn-outline-danger"><i class="material-icons">clear</i> Elimina</a>
                 @else --}}
-                  <a href="{{url('/branchs')}}" class="btn btn-sm btn-outline-danger"><i class="material-icons">clear</i> Annulla</a>
+                  <a href="{{url('/branches')}}" class="btn btn-sm btn-outline-danger"><i class="material-icons">clear</i> Annulla</a>
                 {{-- @endisset --}}
                <button class="btn btn-sm btn-accent float-right"><i class="material-icons">check</i> Salva</button>
               </div>
