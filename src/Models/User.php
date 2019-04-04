@@ -5,6 +5,7 @@ namespace Futurelabs\Bootplant\Models;
 use Futurelabs\Bootplant\Models\Branch;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
@@ -83,7 +84,7 @@ class User extends Authenticatable
             return User::where('branch_id', '=', $this->branch()->pluck('id'))->where('id', '!=', 1)->with('roles')->role(['admin', 'agente']);
         }
 
-        return $this->where('id', 0);
+        return $this->where('id', Auth::id());
     }
 
     public function registries()
