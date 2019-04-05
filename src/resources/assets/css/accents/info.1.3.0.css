@@ -1576,7 +1576,7 @@ i.material-icons {
     .custom-file-input:focus ~ .custom-file-label:hover {
       border-color: #007bff; }
   .custom-file-input:lang(en) ~ .custom-file-label::after {
-    content: "Browse"; }
+    content: "Seleziona"; }
   .custom-file-input:not(:disabled):hover {
     cursor: pointer; }
     .custom-file-input:not(:disabled):hover ~ .custom-file-label,

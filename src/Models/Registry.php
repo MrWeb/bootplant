@@ -29,8 +29,8 @@ class Registry extends Model
     {
         parent::boot();
         static::creating(function ($query) {
-            $query->branch_id = Auth::user()->branch_id;
-            $query->user_id   = Auth::user()->id;
+            $query->branch_id = $query->branch_id ?? Auth::user()->branch_id;
+            $query->user_id   = $query->user_id ?? Auth::user()->id;
         });
     }
 
