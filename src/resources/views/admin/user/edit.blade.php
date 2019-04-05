@@ -101,6 +101,12 @@ Utente
                 <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i><strong class="mr-1">Creato il:</strong> {{ Carbon\Carbon::parse(@$user->created_at)->format('d/m/Y H:i') }}</span>
                 <span class="d-flex mb-2"><i class="material-icons mr-1">today</i><strong class="mr-1">Ultima Modifica il:</strong> {{ Carbon\Carbon::parse(@$user->updated_at)->format('d/m/Y H:i') }}</span>
               </li>
+              <li class="list-group-item p-3">
+                <button class="btn btn-block btn-outline-info">Aggiorna la Password</button>
+                @hasanyrole('superadmin|admin')
+                  <button class="btn btn-block btn-outline-danger">Reset della Password</button>
+                @endhasanyrole
+              </li>
             </ul>
           </div>
           <div class="card-footer border-top">

@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware(['permission:edit users']);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -82,6 +77,11 @@ class UserController extends Controller
         $user = User::where('id', $user)->with('roles')->first();
         //Non può edit Andy Lombardi
         if ($user->id == 1 && Auth::id() != 1) {
+            return back();
+        }
+
+        //Se non è admin/superadmin non può edit altri
+        if (Auth::user()->hasRole('agente') && $user->id != Auth::id()) {
             return back();
         }
 
