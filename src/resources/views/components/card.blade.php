@@ -1,4 +1,4 @@
-<div class="col-{{(isset($size)) ? $size*2 : '12'}} col-md-{{$size ?? '6'}} col-lg-{{(isset($size)) ? $size/2 : '3'}} mb-4">
+<div class="col mb-4">
   <a href="{{$link}}">
     <div class="stats-small stats-small--1 card card-small">
       <div class="card-body bg-{{$color ?? 'white'}} p-0 d-flex">
