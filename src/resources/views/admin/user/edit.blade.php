@@ -102,9 +102,9 @@ Utente
                 <span class="d-flex mb-2"><i class="material-icons mr-1">today</i><strong class="mr-1">Ultima Modifica il:</strong> {{ Carbon\Carbon::parse(@$user->updated_at)->format('d/m/Y H:i') }}</span>
               </li>
               <li class="list-group-item p-3">
-                <button class="btn btn-block btn-outline-info" disabled="disabled">Aggiorna la Password</button>
+                <button type="button" class="btn btn-block btn-outline-info" disabled="disabled">Aggiorna la Password</button>
                 @hasanyrole('superadmin|admin')
-                  <button class="btn btn-block btn-outline-danger" disabled="disabled">Reset della Password</button>
+                  <button type="button" class="btn btn-block btn-outline-danger" disabled="disabled">Reset della Password</button>
                 @endhasanyrole
               </li>
             </ul>
