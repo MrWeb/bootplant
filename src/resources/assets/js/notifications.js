@@ -4,6 +4,14 @@ let lang = {
         type: 'success',
         text: 'Salvato con successo!',
     },
+    errpswupdate: {
+        type: 'error',
+        text: 'Password attuale non corretta!',
+    },
+    pswupdated: {
+        type: 'success',
+        text: 'Password aggiornata con successo!',
+    },
     updated: {
         type: 'success',
         text: 'Aggiornato con successo!',

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -55,15 +56,38 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Reset Password = email
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function passwordreset(Request $request)
     {
-        //
-        // return view('logged.receipt.show')->with(compact('branch', 'receipt', 'order'));
+        $user           = User::find($request->user['id']);
+        $user->password = bcrypt($user->email);
+        $user->save();
+
+        return response()->json(true);
+    }
+
+    /**
+     * Reset Password = email
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function passwordupdate(Request $request)
+    {
+        $user = User::find($request->user_id);
+
+        //Vecchia password corretta
+        if (Hash::check($request->current, $user->password)) {
+            $user->password = bcrypt($request->new);
+            $user->save();
+            return redirect('users/' . $user->id . '/edit?n=pswupdated');
+        } else {
+            return redirect('users/' . $user->id . '/edit?n=errpswupdate');
+        }
     }
 
     /**

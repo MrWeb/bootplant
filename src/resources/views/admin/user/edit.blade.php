@@ -64,9 +64,11 @@ Utente
                     <label for="branch">Ruolo</label>
                     <select name="role" :value="user.roles[0].name" class="form-control" @role('agente') readonly="readonly" @endrole id="role" >
                       <option value="agente">Agente</option>
-                      <option value="admin">Admin</option>
+                      @hasanyrole('admin|superadmin')
+                        <option value="admin">Admin</option>
+                      @endhasanyrole
                       @role('superadmin')
-                      <option value="superadmin">Super-Admin</option>
+                        <option value="superadmin">Super-Admin</option>
                       @endrole
                     </select>
                   </div>
@@ -102,17 +104,21 @@ Utente
                 <span class="d-flex mb-2"><i class="material-icons mr-1">today</i><strong class="mr-1">Ultima Modifica il:</strong> {{ Carbon\Carbon::parse(@$user->updated_at)->format('d/m/Y H:i') }}</span>
               </li>
               <li class="list-group-item p-3">
-                <button type="button" class="btn btn-block btn-outline-info" disabled="disabled">Aggiorna la Password</button>
-                @hasanyrole('superadmin|admin')
-                  <button type="button" class="btn btn-block btn-outline-danger" disabled="disabled">Reset della Password</button>
-                @endhasanyrole
+                @if(Auth::id() == $user->id)
+                  <button ref="pswreset" type="button" class="btn btn-block btn-outline-info" @click="$refs.modal.click()">Aggiorna la Password</button>
+                @endif
+                  @hasanyrole('superadmin|admin')
+                    @if(Auth::id() !== $user->id)
+                      <button :disabled="is_psw_email" type="button" class="btn btn-block btn-outline-warning" @click="modal({type:'error',text: 'Sei sicuro di vole reset questa password?',confirm: 'Sì, resetta', callback:{fn:pswReset}})">Reset della Password</button>
+                    @endif
+                  @endhasanyrole
               </li>
             </ul>
           </div>
           <div class="card-footer border-top">
             <div class="row">
               <div class="col">
-                @isset($user)
+                @if(isset($user->id) && $user->id != Auth::id())
                   <a href="#!" @click="modal({
                   type: 'warning',
                   text: 'Sei sicuro di vole eliminare questo utente?',
@@ -127,8 +133,8 @@ Utente
               })" class="btn btn-sm btn-outline-danger"><i class="material-icons">clear</i> Elimina</a>
                 @else
                   <a href="{{url('/users')}}" class="btn btn-sm btn-outline-danger"><i class="material-icons">clear</i> Annulla</a>
-                @endisset
-               <button class="btn btn-sm btn-accent float-right"><i class="material-icons">check</i> Salva</button>
+                @endif
+               <button class="btn btn-sm btn-success float-right"><i class="material-icons">check</i> Salva</button>
               </div>
             </div>
           </div>
@@ -136,12 +142,28 @@ Utente
       </div>
     </div>
   </form>
+  @include('bootplant::admin.user.modal-psw-reset')
   @endsection
   @section('js')
   <script type="text/javascript">
   new VueApp({
   data:{
-    user:@json($user ?? ['roles' => [0 => ['name' => 'agente']]])
+    user:@json($user ?? ['roles' => [0 => ['name' => 'agente']]]),
+    is_psw_email: @json(Hash::check($user->email, $user->password)),
+  },
+  mounted(){
+    if (this.urlParam('resetforce')){
+      this.$refs.pswreset.click();
+    }
+  },
+  methods:{
+    pswReset(){
+      axios.post('/users/password/reset', {user:this.user}).then((response)=>{
+        if(response.status){
+          notify({type:'success', text:'Password resettata correttamente!'});
+        }
+      });
+    }
   }
   }).$mount('#app');
   </script>
