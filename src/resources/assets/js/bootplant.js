@@ -51,6 +51,7 @@ window.mixin = {
         return {
             loading: true,
             edited: false,
+            modal: {}
         }
     },
     methods: {
