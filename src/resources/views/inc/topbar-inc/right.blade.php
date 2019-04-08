@@ -55,7 +55,7 @@
         <i class="material-icons">person</i>Profilo
       </a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="{{url('updatepsw')}}">
+      <a class="dropdown-item" href="{{url('/users/'.Auth::id().'/edit?resetforce=true')}}">
         <i class="material-icons">vpn_key</i>Aggiorna Password
       </a>
       <form action="{{url('logout')}}" method="POST">
