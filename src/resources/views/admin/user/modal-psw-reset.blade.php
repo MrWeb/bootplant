@@ -1,7 +1,7 @@
 <button type="button" ref="modal" class="d-none btn btn-primary" data-toggle="modal" data-target="#event"></button>
 <form action="{{url('users/password/update')}}" method="POST">
   @csrf
-  <input type="hidden" name="user_id" value="{{$user->id}}">
+  <input type="hidden" name="user_id" value="{{@$user->id}}">
   <div class="modal fade" id="event" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
