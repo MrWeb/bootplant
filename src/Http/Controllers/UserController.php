@@ -42,12 +42,8 @@ class UserController extends Controller
     {
         $user = new User;
 
-        $user->branch_id     = $request->branch_id;
-        $user->name          = $request->name;
-        $user->lastname      = $request->lastname;
-        $user->email         = $request->email;
-        $user->internal_code = $request->internal_code;
-        $user->password      = bcrypt($request->email);
+        $user->fill($request->all());
+        $user->password = bcrypt($request->email);
 
         $user->save();
         $user->assignRole($request->role);
