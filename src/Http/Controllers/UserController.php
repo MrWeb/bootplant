@@ -122,11 +122,12 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->branch_id     = $request->branch_id;
-        $user->name          = $request->name;
-        $user->lastname      = $request->lastname;
-        $user->email         = $request->email;
-        $user->internal_code = $request->internal_code;
+        $user->fill($request->all());
+        // $user->branch_id     = $request->branch_id;
+        // $user->name          = $request->name;
+        // $user->lastname      = $request->lastname;
+        // $user->email         = $request->email;
+        // $user->internal_code = $request->internal_code;
 
         $user->save();
 
