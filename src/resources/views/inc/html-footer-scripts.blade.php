@@ -19,6 +19,7 @@ let base_url = '{{url('')}}';
 table_name = '{{$table}}';
 </script>
 <script type="text/javascript" src="{{asset('js/datatable-lang.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/datatable-yadcf.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/dataTables.responsive.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/table-buttons.js')}}"></script>
