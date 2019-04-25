@@ -24,11 +24,11 @@
 <link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=dLJYYOG6RG" color="#17be66">
 <link rel="shortcut icon" href="/icons/favicon.ico?v=dLJYYOG6RG">
 
-<meta name="msapplication-TileColor" content="#17BE66">
+<meta name="msapplication-TileColor" content="{{config('bootplant.app_hex', '#17BE66')}}">
 <meta name="msapplication-TileImage" content="{{asset('images/icons/ms-icon-144x144.png')}}">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="{{config('bootplant.app_name')}}">
-<meta name="theme-color" content="#17BE66">
+<meta name="theme-color" content="{{config('bootplant.app_hex', '#17BE66')}}">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @yield('extrastyle')

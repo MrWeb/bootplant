@@ -5,7 +5,8 @@ return [
     'app_copyrights'      => 'G-Bubble',
     'app_copyrights_txt'  => 'Futurelabs',
     'app_copyrights_link' => 'https://www.futurelabs.it/',
-    'app_color'           => 'info', //Possiblità: danger, info, java, royal-blue, salmon, secondary, success, warning
+    'app_color'           => 'info',    //Possiblità: danger, info, java, royal-blue, salmon, secondary, success, warning
+    'app_hex'             => '#17BE66', //Colore Hex per Chrome header
     'app_theme_version'   => '1.3.0',
     'app_menu_position'   => 'top', //left, top
 
