@@ -20,7 +20,7 @@
     "imagemin": "^5.3.1",
     "jquery": "^3.3.1",
     "laravel-mix": "^4.0.15",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "noty": "^3.2.0-beta",
     "nouislider": "^13.1.3",
